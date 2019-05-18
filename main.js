@@ -25,7 +25,7 @@ window.addEventListener("load", function (event) {
 
     var render = function () {
 
-        display.renderColor("#ffff00");
+        display.renderColor("#ffffff");
 
         game.draw(display);
 

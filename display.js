@@ -39,4 +39,19 @@ class Display {
         this.buffer.fillRect(Math.floor(x), Math.floor(y), width, height);
 
     };
+
+    drawRect(x, y, w, h, color, stroke_w, stroke_color = "#000000") {
+        this.buffer.beginPath();
+        if (color != null) {
+            this.buffer.fillStyle = color;
+        }
+        this.buffer.rect(x, y, w, h);
+        if (stroke_w != undefined) {
+            this.buffer.lineWidth = stroke_w;
+            if (stroke_color != undefined) {
+                this.buffer.strokeStyle = stroke_color;
+            }
+            this.buffer.stroke();
+        }
+    }
 }

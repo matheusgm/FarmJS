@@ -1,21 +1,15 @@
 class Button extends Object {
-    constructor(nome, x, y, w, h, type, img = null) {
+    constructor(nome, x, y, w, h, acao, img = null) {
         super(x, y, w, h)
         this.nome = nome;
-        this.ativado = false;
+        this.acao = acao;
         this.img = img;
-        this.type = type;
-        this.hit = false;
+        this.color = "#ff00ff";
     }
 
-    isAtivado() { return this.ativado; }
-
-    setAtivado(ativado) { this.ativado = ativado; }
-
-    color() { if (this.isAtivado()) { return "#00ffff" } else { return "#ff00ff" } }
-
-    changeStatus() {
-        this.setAtivado(!this.isAtivado());
+    getAcao() {
+        return this.acao;
     }
+
 
 }
